@@ -14,30 +14,29 @@ public class Estado {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int ide;
-	@Column(name = "NombreEstado")
-	private String NombreEstado;
+	@Column(name = "nombreEstado")
 	
+	private String nombreEstado;
 	public Estado(int ide, String nombreEstado) {
 		super();
 		this.ide = ide;
-		NombreEstado = nombreEstado;
+		this.nombreEstado = nombreEstado;
+		
+		
 	}
-
 	public int getIde() {
 		return ide;
 	}
-
 	public void setIde(int ide) {
 		this.ide = ide;
 	}
-
 	public String getNombreEstado() {
-		return NombreEstado;
+		return nombreEstado;
 	}
-
 	public void setNombreEstado(String nombreEstado) {
-		NombreEstado = nombreEstado;
+		this.nombreEstado = nombreEstado;
 	}
+	
 	
 	
 

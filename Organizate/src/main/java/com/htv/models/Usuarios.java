@@ -1,5 +1,7 @@
 package com.htv.models;
 
+
+
 import java.util.ArrayList;
 
 import javax.persistence.Column;
@@ -8,8 +10,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+
 @Entity
-@Table(name = "usuarios")
+@Table(name = "Usuarios")
 public class Usuarios {
 
 
@@ -19,18 +23,18 @@ public class Usuarios {
 		private int idu;
 		@Column(name = "correo")
 		private String correo;
-		@Column(name = "nombre")
-		private String nombre;
+		@Column(name = "nombreUsuario")
+		private String nombreUsuario;
 		@Column(name = "contraseña")
 		private String contraseña;
 		@Column(name = "ido")
 		private ArrayList<Objetivo> ido;
 		
-		public Usuarios(int idu, String correo, String nombre, String contraseña, ArrayList<Objetivo> ido) {
+		public Usuarios(int idu, String correo, String contraseña, ArrayList<Objetivo> ido, String nombreUsuario) {
 			super();
 			this.idu = idu;
 			this.correo = correo;
-			this.nombre = nombre;
+			this.nombreUsuario = nombreUsuario;
 			this.contraseña = contraseña;
 			this.ido = ido;
 		}
@@ -51,12 +55,12 @@ public class Usuarios {
 			this.correo = correo;
 		}
 
-		public String getNombre() {
-			return nombre;
+		public String getNombreUsuario() {
+			return nombreUsuario;
 		}
 
-		public void setNombre(String nombre) {
-			this.nombre = nombre;
+		public void setNombreUsuario(String nombre) {
+			this.nombreUsuario = nombre;
 		}
 
 		public String getContraseña() {

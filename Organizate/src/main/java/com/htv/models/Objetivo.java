@@ -16,48 +16,51 @@ public class Objetivo {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int ido;
-	@Column(name = "NombreObjetivo")
-	private String NombreObjetivo;
-	@Column(name = "idc")
-	private ArrayList<Categoria> idc;
+	@Column(name = "nombreObjetivo")
+	private String nombreObjetivo;
+	@Column(name = "descripcion")
+	private String descripcion;
+	@Column(name = "idcategoria")
+	private ArrayList<Categoria> idcategoria;
 	
 	
-
-	
-	public Objetivo(int ido, String nombreObjetivo, ArrayList<Categoria> idc) {
+	public Objetivo(int ido, String nombreObjetivo, String descripcion, ArrayList<Categoria> idcategoria) {
 		super();
 		this.ido = ido;
-		NombreObjetivo = nombreObjetivo;
-		this.idc = idc;
+		this.nombreObjetivo = nombreObjetivo;
+		this.descripcion = descripcion;
+		this.idcategoria = idcategoria;
+		
 	}
-
+	
 	public int getIdo() {
 		return ido;
 	}
-
 	public void setIdo(int ido) {
 		this.ido = ido;
 	}
-
 	public String getNombreObjetivo() {
-		return NombreObjetivo;
+		return nombreObjetivo;
 	}
-
 	public void setNombreObjetivo(String nombreObjetivo) {
-		NombreObjetivo = nombreObjetivo;
+		this.nombreObjetivo = nombreObjetivo;
 	}
-
-
-
-	public ArrayList<Categoria> getIdCategoria() {
-		return idc;
+	public String getDescripcion() {
+		return descripcion;
 	}
-
-
-
-	public ArrayList<Categoria> setIdCategoria() {
-		return idc;
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
 	}
+	public ArrayList<Categoria> getIdcategoria() {
+		return idcategoria;
+	}
+	public void setIdcategoria(ArrayList<Categoria> idcategoria) {
+		this.idcategoria = idcategoria;
+	}
+	
+	
+	
+
 	
 	
 

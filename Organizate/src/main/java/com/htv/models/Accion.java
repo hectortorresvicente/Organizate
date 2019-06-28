@@ -16,108 +16,160 @@ public class Accion {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int ida;
-	@Column(name = "NombreAccion")
-	private String NombreAccion;
-	@Column(name ="DuracionAccion")
-	private Time DuracionAccion;
-	@Column(name ="Delegar")
-	private String Delegar;
-	@Column(name ="FechaCreacion")
-	private Time FechaCreacion;
-	@Column(name ="PrioridadAccion")
-	private Prioridad  PrioridadAccion;
-	@Column(name ="EstadoAccion")
-	private Estado  EstadoAccion;
-	@Column(name ="ObjetivoRelacionAccion")
-	private Objetivo  ObjetivoRelacionAccion;
-	@Column(name = "ido")
-	private ArrayList<Categoria> ido;
+	@Column(name = "nombreAccion")
+	private String nombreAccion;
+	@Column(name ="duracionAccion")
+	private Time duracionAccion;
+	@Column(name ="delegar")
+	private String delegar;
+	@Column(name ="fechaCreacion")
+	private Time fechaCreacion;
+	@Column(name ="idprioridadAccion")
+	private ArrayList<Prioridad> idprioridadAccion;
+	@Column(name ="idestadoAccion")
+	private ArrayList<Estado> idestadoAccion;
+	@Column(name ="idobjetivoRelacionAccion")
+	private ArrayList<Objetivo> idobjetivoRelacionAccion;
+	@Column(name ="descripcion")
+	private String descripcion;
+	@Column(name ="idaccionRelacionAccionHIjo")
+	private ArrayList<Accion> idaccionRelacionAccionHIjo;
+	@Column(name ="idaccionRelacionAccionPadre")
+	private ArrayList<Accion> idaccionRelacionAccionPadre;
+	
 	
 	public Accion(int ida, String nombreAccion, Time duracionAccion, String delegar, Time fechaCreacion,
-			Prioridad prioridadAccion, Estado estadoAccion, Objetivo objetivoRelacionAccion, ArrayList<Categoria> ido) {
+			ArrayList<Prioridad> idprioridadAccion, ArrayList<Estado> idestadoAccion,
+			ArrayList<Objetivo> idobjetivoRelacionAccion, String descripcion,
+			ArrayList<Accion> idaccionRelacionAccionHIjo, ArrayList<Accion> idaccionRelacionAccionPadre) {
 		super();
 		this.ida = ida;
-		NombreAccion = nombreAccion;
-		DuracionAccion = duracionAccion;
-		Delegar = delegar;
-		FechaCreacion = fechaCreacion;
-		PrioridadAccion = prioridadAccion;
-		EstadoAccion = estadoAccion;
-		ObjetivoRelacionAccion = objetivoRelacionAccion;
-		this.ido = ido;
+		this.nombreAccion = nombreAccion;
+		this.duracionAccion = duracionAccion;
+		this.delegar = delegar;
+		this.fechaCreacion = fechaCreacion;
+		this.idprioridadAccion = idprioridadAccion;
+		this.idestadoAccion = idestadoAccion;
+		this.idobjetivoRelacionAccion = idobjetivoRelacionAccion;
+		this.descripcion = descripcion;
+		this.idaccionRelacionAccionHIjo = idaccionRelacionAccionHIjo;
+		this.idaccionRelacionAccionPadre = idaccionRelacionAccionPadre;
 	}
+
 
 	public int getIda() {
 		return ida;
 	}
 
+
 	public void setIda(int ida) {
 		this.ida = ida;
 	}
 
+
 	public String getNombreAccion() {
-		return NombreAccion;
+		return nombreAccion;
 	}
+
 
 	public void setNombreAccion(String nombreAccion) {
-		NombreAccion = nombreAccion;
+		this.nombreAccion = nombreAccion;
 	}
+
 
 	public Time getDuracionAccion() {
-		return DuracionAccion;
+		return duracionAccion;
 	}
+
 
 	public void setDuracionAccion(Time duracionAccion) {
-		DuracionAccion = duracionAccion;
+		this.duracionAccion = duracionAccion;
 	}
+
 
 	public String getDelegar() {
-		return Delegar;
+		return delegar;
 	}
+
 
 	public void setDelegar(String delegar) {
-		Delegar = delegar;
+		this.delegar = delegar;
 	}
+
 
 	public Time getFechaCreacion() {
-		return FechaCreacion;
+		return fechaCreacion;
 	}
+
 
 	public void setFechaCreacion(Time fechaCreacion) {
-		FechaCreacion = fechaCreacion;
+		this.fechaCreacion = fechaCreacion;
 	}
 
-	public Prioridad getPrioridadAccion() {
-		return PrioridadAccion;
+
+	public ArrayList<Prioridad> getIdprioridadAccion() {
+		return idprioridadAccion;
 	}
 
-	public void setPrioridadAccion(Prioridad prioridadAccion) {
-		PrioridadAccion = prioridadAccion;
+
+	public void setIdprioridadAccion(ArrayList<Prioridad> idprioridadAccion) {
+		this.idprioridadAccion = idprioridadAccion;
 	}
 
-	public Estado getEstadoAccion() {
-		return EstadoAccion;
+
+	public ArrayList<Estado> getIdestadoAccion() {
+		return idestadoAccion;
 	}
 
-	public void setEstadoAccion(Estado estadoAccion) {
-		EstadoAccion = estadoAccion;
+
+	public void setIdestadoAccion(ArrayList<Estado> idestadoAccion) {
+		this.idestadoAccion = idestadoAccion;
 	}
 
-	public Objetivo getObjetivoRelacionAccion() {
-		return ObjetivoRelacionAccion;
+
+	public ArrayList<Objetivo> getIdobjetivoRelacionAccion() {
+		return idobjetivoRelacionAccion;
 	}
 
-	public void setObjetivoRelacionAccion(Objetivo objetivoRelacionAccion) {
-		ObjetivoRelacionAccion = objetivoRelacionAccion;
+
+	public void setIdobjetivoRelacionAccion(ArrayList<Objetivo> idobjetivoRelacionAccion) {
+		this.idobjetivoRelacionAccion = idobjetivoRelacionAccion;
 	}
 
-	public ArrayList<Categoria> getIdo() {
-		return ido;
+
+	public String getDescripcion() {
+		return descripcion;
 	}
 
-	public void setIdo(ArrayList<Categoria> ido) {
-		this.ido = ido;
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
 	}
+
+
+	public ArrayList<Accion> getIdaccionRelacionAccionHIjo() {
+		return idaccionRelacionAccionHIjo;
+	}
+
+
+	public void setIdaccionRelacionAccionHIjo(ArrayList<Accion> idaccionRelacionAccionHIjo) {
+		this.idaccionRelacionAccionHIjo = idaccionRelacionAccionHIjo;
+	}
+
+
+	public ArrayList<Accion> getIdaccionRelacionAccionPadre() {
+		return idaccionRelacionAccionPadre;
+	}
+
+
+	public void setIdaccionRelacionAccionPadre(ArrayList<Accion> idaccionRelacionAccionPadre) {
+		this.idaccionRelacionAccionPadre = idaccionRelacionAccionPadre;
+	}
+	
+	
+	
+	
+	
 	
 	
 	

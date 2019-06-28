@@ -13,19 +13,17 @@ public class Categoria {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idc;
-	@Column(name = "NombreCategoria")
-	private String NombreCategoria;
+	@Column(name = "nombreCategoria")
+	private String nombreCategoria;
 	
 	
-	
+
+
 	public Categoria(int idc, String nombreCategoria) {
 		super();
 		this.idc = idc;
-		NombreCategoria = nombreCategoria;
+		this.nombreCategoria = nombreCategoria;
 	}
-
-
-
 
 
 	public int getIdc() {
@@ -39,12 +37,12 @@ public class Categoria {
 
 
 	public String getNombreCategoria() {
-		return NombreCategoria;
+		return nombreCategoria;
 	}
 
 
 	public void setNombreCategoria(String categoria) {
-		this.NombreCategoria = categoria;
+		this.nombreCategoria = categoria;
 	}
 	
 	

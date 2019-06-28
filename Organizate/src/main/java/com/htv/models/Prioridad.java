@@ -15,30 +15,41 @@ public class Prioridad {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idp;
 	@Column(name = "NobrePrioridad")
-	private String NobrePrioridad;
+	private String nobrePrioridad;
 	
+	
+
 	public Prioridad(int idp, String nobrePrioridad) {
 		super();
 		this.idp = idp;
-		NobrePrioridad = nobrePrioridad;
+		this.nobrePrioridad = nobrePrioridad;
 	}
+
+
 
 	public int getIdp() {
 		return idp;
 	}
 
+
+
 	public void setIdp(int idp) {
 		this.idp = idp;
 	}
 
+
+
 	public String getNobrePrioridad() {
-		return NobrePrioridad;
+		return nobrePrioridad;
 	}
 
+
+
 	public void setNobrePrioridad(String nobrePrioridad) {
-		NobrePrioridad = nobrePrioridad;
+		this.nobrePrioridad = nobrePrioridad;
 	}
-	
+
+
 	
 
 }
